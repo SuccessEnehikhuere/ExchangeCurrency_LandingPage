@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.w-fit-content {
+  width: fit-content;
+}
+
+.transition-color {
+  transition: color 0.25s ease 0s;
+}
+
+.transition-all-0ms {
+  transition: all 0ms ease 0s;
+}
+
+.transition-all {
+  transition: all 0.25s ease-in-out;
+}
