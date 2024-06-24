@@ -27,21 +27,29 @@ export const exchangeAccordion = [
     title: 'Trade in 3 fiat currencies',
     content: 'The Exchange supports USD, EUR, and GBP.',
     image: '/images/currency.png',
+    height: '542px',
+    width: '360px',
   },
   {
     title: 'A matching engine that can keep up with you',
     content:
       'The world’s fastest crypto matching engine, built by and for traders.',
     image: '/images/exchange-1.png',
+    height: '560px',
+    width: '466px',
   },
   {
     title: '24/7 live chat support',
     content: 'Chat with customer support directly in the Exchange, anytime.',
     image: '/images/exchange-2.png',
+    height: '510px',
+    width: '375px',
   },
   {
     title: 'Margin Trading',
     content: '5x your position with margin trading',
-    image: '/images/exchange-3.png',
+    image: '/images/ex-landing.png',
+    height: '611px',
+    width: '895x',
   },
 ]

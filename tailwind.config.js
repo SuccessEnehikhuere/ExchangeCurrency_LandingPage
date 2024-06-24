@@ -17,7 +17,8 @@ export default {
         exchangeOther: 'rgb(236, 245, 254)',
         exchangeLightColor: 'rgb(61, 137 245)',
         currencyColor: 'rgb(245, 250, 254)',
-        currencyBorder: 'rgb(216, 222, 253)'
+        currencyBorder: 'rgb(216, 222, 253)',
+        menuBorder: 'rgb(223, 227, 235)',
       },
       backgroundImage: {
         'home-hero-gradient': "url('/images/home-hero-gradient.jpg')",
@@ -37,6 +38,12 @@ export default {
       },
       backgroundRepeat: {
         'no-repeat': 'no-repeat',
+      },
+      transitionDuration: {
+        250: '250ms',
+      },
+      transitionTimingFunction: {
+        linear: 'linear',
       },
     },
   },

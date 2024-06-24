@@ -18,7 +18,7 @@ const Hero = () => {
               className="w-[100%] max-w-[25rem] py-4 px-4 font-[400] text-white rounded-md leading-5 border-none bg-formColor  text-sm"
               placeholder="your email address"
             />
-            <button className="bg-[#ECF5FE] text-[#0C6CF2] capitalize text-sm py-3 px-5 rounded-md">sign up</button>
+            <button className="bg-[#ECF5FE] text-[#0C6CF2] capitalize text-sm py-3 px-5 rounded-md text-nowrap">sign up</button>
           </form>
         </div>
 

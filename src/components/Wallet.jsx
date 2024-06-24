@@ -1,9 +1,10 @@
 import React, { act, useState } from 'react'
 import WalletSvg from './WalletSvg'
 import { accordionItems } from '../utils/AccordionItem'
+import Carousel from './Carousel';
 
 const Wallet = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleAccordionClick = (index)=>{
     setActiveIndex(index === activeIndex ? null : index);
@@ -30,17 +31,14 @@ const Wallet = () => {
               return (
                 <div
                   key={index}
-                  className={` mb-3 rounded-xl  border-[1px] border-walletBorder ${
+                  className={` mb-3 rounded-xl border border-walletBorder cursor-pointer ${
                     activeIndex === index ? 'bg-walletActive' : 'bg-walletOther'
                   }`}
                   onClick={() => handleAccordionClick(index)}
                 >
                   <h3
-                    className={`text-walletText py-4 px-5 text-[1rem] font-[500] leading-5 transition-all ${
-                      activeIndex === index
-                        ? 'transition-color'
-                        : ''
-                    }`}
+                    className={`text-walletText py-4 px-5 text-[1rem] font-[500] leading-5 transition-all ease-in-out 
+                    `}
                   >
                     {item.title}
                   </h3>
@@ -56,23 +54,30 @@ const Wallet = () => {
 
           {/*CAROUSEL CONTAINER*/}
 
-          <a className="inline-flex justify-center py-[0.6rem] px-[0.875rem] md:py-2 md:px-5 text-lg font-[500] rounded-lg text-nowrap bg-walletText text-white w-fit-content mt-[5rem] items-center tracking-wide leading-[143%] md:leading-[144%] cursor-pointer">
+          <div className="md:hidden">
+            <Carousel
+              data={accordionItems}
+              dotClass="slick-dots"
+              arrowClass="custom-arrows"
+            />
+          </div>
+
+          <a className="inline-flex justify-center py-[0.6rem] px-[0.875rem] md:py-[0.8rem] md:px-[1.4rem] text-[0.875rem] md:text-lg font-[500] rounded-lg text-nowrap bg-walletText text-white w-fit-content mt-7 md:mt-[5rem] items-center tracking-wide leading-[143%] md:leading-[144%] cursor-pointer border-[0.125rem] border-transparent ">
             Get Started
           </a>
         </div>
 
         {/*IMAGE CONTAINER*/}
-        <div className='hidden md:flex flex-col pl-[5rem] justify-center'>
+        <div className="hidden md:flex flex-col pl-[5rem] justify-center">
           {activeIndex !== null && (
-            <div className='h-[100%] w-[100%] flex items-center justify-center'>
-            <img
-              src={accordionItems[activeIndex].image}
-              alt="Accordion related"
-              className="rounded-lg w-[422px] h-[690px]"
-            />
-           </div> 
+            <div className="h-[100%] w-[100%] flex items-center justify-center">
+              <img
+                src={accordionItems[activeIndex].image}
+                alt="Accordion related"
+                className="rounded-lg w-[422px] h-[690px]"
+              />
+            </div>
           )}
-          
         </div>
       </section>
     </div>

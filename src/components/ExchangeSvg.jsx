@@ -16,21 +16,21 @@ const ExchangeSvg = () => {
           height="28"
           rx="3"
           stroke="#f5a250"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           width="28"
           x="2"
           y="2"
         ></rect>
       </mask>
-      <g mask="url(#a)" stroke="#0c6cf2" stroke-width="2">
-        <g stroke-linecap="round">
+      <g mask="url(#a)" stroke="#0c6cf2" strokeWidth="2">
+        <g strokeLinecap="round">
           <rect
             fill="#fff"
             height="28"
             rx="3"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             width="28"
             x="2"
             y="2"
@@ -38,8 +38,8 @@ const ExchangeSvg = () => {
           <path
             d="m27 7 3-1v24h-28v-5l3-7 4 1 7-8 7-1z"
             fill="#0c6cf2"
-            fill-opacity=".36"
-            stroke-linejoin="round"
+            fillOpacity=".36"
+            strokeLinejoin="round"
           ></path>
           <path d="m16 16v14"></path>
           <path d="m9 22v8"></path>

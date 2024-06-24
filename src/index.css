@@ -17,3 +17,116 @@
 .transition-all {
   transition: all 0.25s ease-in-out;
 }
+
+.carousel-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+
+/* .carousel-slide {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+} */
+
+.carousel-image {
+  width: 254px;
+  height: 375px;
+  /* margin-bottom: 10px; */
+  min-height: 350px;
+  margin: 0px auto 105px;
+  padding: 0;
+  object-fit: contain;
+}
+
+.carousel-controls {
+  margin-top: 130px; 
+}
+
+.carousel-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 60px; 
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+}
+
+.carousel-prev, .carousel-next {
+  left: 0;
+  width: 44px;
+  height: 44px;
+  top:460px;
+  bottom: auto;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(115, 73, 242);
+  border-radius: 8px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.carousel-next {
+  right: auto;
+  left:54px;
+}
+
+.slick-dots {
+  bottom: auto; 
+  top:460px;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+ 
+}
+
+.slick-dots li button::before {
+  font-size: 10px;
+  width: 20px;
+  height:20px;
+  cursor: pointer;
+  margin: 0px 4px;
+  color: rgb(115,73,242);
+  
+}
+
+.slick-dots li.slick-active button::before {
+  color: rgb(115,73,242);
+  
+}
+
+/* .carousel-dot {
+  width: 100px;
+  height: 1000px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 0 5px;
+} */
+
+
+
+.custom-dots li button::before {
+  font-size: 10px;
+  color: rgb(12, 108, 242);
+}
+
+.custom-dots li.slick-active button::before {
+  color: rgb(12, 108, 242);
+}
+
+.custom-arrows svg path {
+  stroke: rgb(12, 108, 242);
+}
+
+.custom-arrows:hover svg path {
+  stroke: rgb(115, 73, 242);
+}
+
+
