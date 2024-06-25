@@ -14,17 +14,13 @@ const Exchange = () => {
     <div className="px-4 max-w-[80rem] mx-auto md:px-10 ">
       <section className="bg-exchangeColor flex flex-col overflow-hidden p-4 text-exchangeText rounded-[1.25rem] md:rounded-3xl bg-exchange-image bg-left-top md:bg-left-bottom bg-no-repeat bg-375px md:bg-625px min-h-[52.5rem] my-[3.75rem] mx-0 md:mx-auto max-w-[80rem] md:grid md:grid-cols-2  ">
         {/*IMAGE CONTAINER*/}
-        <div className="hidden md:flex flex-col justify-center pl-[8.75rem] ">
+        <div className="hidden md:flex flex-col justify-center pl-[5rem] ">
           {activeIndex !== null && (
             <div className="h-[100%] w-[100%] flex items-center justify-center ">
               <img
                 src={exchangeAccordion[activeIndex].image}
                 alt="Accordion related"
-                className="rounded-lg "
-                style={{
-                  height: exchangeAccordion[activeIndex].height,
-                  width: exchangeAccordion[activeIndex].width,
-                }}
+                className="rounded-lg w-[422px] h-[600px]"
               />
             </div>
           )}
@@ -48,17 +44,18 @@ const Exchange = () => {
               return (
                 <div
                   key={index}
-                  className={`bg-currencyColor border border-currencyBorder cursor-pointer rounded-[0.75rem] mb-[0.75rem]`}
+                  className={`bg-currencyColor border border-currencyBorder cursor-pointer rounded-xl mb-3`}
                   onClick={() => handleAccordionClick(index)}
                 >
                   <h3
-                    className={`py-4 px-[1.25rem] text-[1rem] font-[500] leading-[1.5rem] transition-all ease-in-out`}
+                    className={`py-4 px-5 text-[1rem] font-[500] leading-5 transition-all ease-in-out`}
                   >
                     {item.title}
                   </h3>
                   {activeIndex === index && (
                     <p className=" max-w-[80%] overflow-hidden px-[1.25rem]  pb-[1rem] text-[1rem] font-[400] leading-[1.5rem] duration-500 transition-all">
-npm install                    </p>
+                      {item.content}
+                    </p>
                   )}
                 </div>
               )
@@ -70,8 +67,10 @@ npm install                    </p>
           <div className="md:hidden">
             <Carousel
               data={exchangeAccordion}
-              dotClass="custom-dots"
-              arrowClass="custom-arrows"
+              dotClass="slick-dots"
+              arrowClass="carousel-arrow"
+              arrowColor="rgb(12, 108, 242)"
+              dotColor="rgb(12, 108, 242)"
             />
           </div>
 

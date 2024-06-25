@@ -112,7 +112,7 @@
 
 
 
-.custom-dots li button::before {
+/* .custom-dots li button::before {
   font-size: 10px;
   color: rgb(12, 108, 242);
 }
@@ -127,6 +127,6 @@
 
 .custom-arrows:hover svg path {
   stroke: rgb(115, 73, 242);
-}
+} */
 
 

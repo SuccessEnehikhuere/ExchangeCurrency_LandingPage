@@ -12,7 +12,7 @@ const Wallet = () => {
 
 
   return (
-    <div className="max-w-[80rem] px-[1rem] md:px-[2.5rem] ">
+    <div className="max-w-[80rem] px-4 md:px-10 mx-auto">
       <section className="text-customColor flex flex-col md:grid md:grid-cols-2 bg-walletColor bg-375px bg-top-right-180px rounded-[1.25rem] md:rounded-3xl bg-wallet-image bg-no-repeat md:bg-625px md:bg-right-bottom-2.5rem my-[3.8rem] p-4 min-h-[52.5rem]  ">
         <div className="text-walletText flex justify-start md:py-[70px] flex-col md:pl-[8.8rem] py-0 ">
           <div className="inline-flex rounded-3xl place-items-center mb-5 p-3 md:p-4 bg-walletOther self-start ">
@@ -57,8 +57,6 @@ const Wallet = () => {
           <div className="md:hidden">
             <Carousel
               data={accordionItems}
-              dotClass="slick-dots"
-              arrowClass="custom-arrows"
             />
           </div>
 
